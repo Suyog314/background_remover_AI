@@ -1,0 +1,116 @@
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef1f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #004080;
+}
+
+.drop-zone {
+  position: relative;
+  padding: 50px;
+  border: 3px dashed #007BFF;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+  background-color: #e6f0ff;
+}
+
+.drop-zone-text {
+  font-size: 16px;
+  color: #555;
+}
+
+button {
+  margin-top: 25px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.preview {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.loader {
+  margin-top: 25px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007BFF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.result {
+  margin-top: 40px;
+}
+
+.result h2 {
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+a {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 15px;
+  color: #004080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

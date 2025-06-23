@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Remover</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Background Remover</h1>
+
+    <form method="POST" enctype="multipart/form-data" id="uploadForm">
+      <div class="drop-zone" id="dropZone">
+        <span class="drop-zone-text">Drag & drop your image here or click to upload</span>
+        <input type="file" name="image" id="imageInput" accept="image/*" required hidden>
+      </div>
+      <img id="previewImage" class="preview" style="display: none;" />
+      <button type="submit">Remove Background</button>
+    </form>
+
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    {% if result_image %}
+    <div class="result">
+      <h2>Result</h2>
+      <img src="{{ url_for('static', filename=result_image) }}" alt="Processed Image" id="outputImage">
+      <a href="{{ url_for('static', filename=result_image) }}" download>Download Image</a>
+    </div>
+    {% endif %}
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
